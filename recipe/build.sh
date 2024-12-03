@@ -36,6 +36,7 @@ tee ${PREFIX}/bin/scalariform << EOF
 #!/bin/sh
 exec \${JAVA_HOME}/bin/java -jar "\${CONDA_PREFIX}/libexec/scalariform/scalariform.jar" "\$@"
 EOF
+chmod +x ${PREFIX}/bin/scalariform
 
 tee ${PREFIX}/bin/scalariform.cmd << EOF
 call %JAVA_HOME%\bin\java -jar %CONDA_PREFIX%\libexec\scalariform\scalariform.jar %*
